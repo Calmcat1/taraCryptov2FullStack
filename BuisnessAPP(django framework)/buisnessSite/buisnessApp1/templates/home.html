@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/CSS/customBootstrap.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--maincontainer-->
+  <div class="maincontainer">
+
+    <!-- Desktop Navbar (visible on larger screens) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block">
+      <div class="container">
+          <a class="navbar-brand" href="/home"><b><i>TaraCrypto</i></b></a>
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/products">Products</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/blogs">Blog</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/feedback">Feedback</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+
+  <!-- Mobile Navbar (hamburger menu; visible on smaller screens) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-lg-none">
+      <div class="container">
+          <a class="navbar-brand" href="/home"><b><i>TaraCrypto</i></b></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mobileNav">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/products">Products</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/blogs">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/feedback">Feedback</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <!--content-->
+  <div class="content">
+
+    <!--carousel-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      
+      <!-- Slides -->
+      <div class="carousel-inner">
+          <div class="carousel-item active custom-background">
+              <div class="solid-color-slide1"></div>
+              <div class="carousel-caption">
+                <h3>BTC</h3>
+                <p>Introduced in 2009, this coin begun crypto as we know it today</p>
+              </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div class="solid-color-slide2"></div>
+            <div class="carousel-caption">
+                <h3>ETH</h3>
+                <p>Introduced in 2015, this coin has done alot to change the crypto landscape.</p>
+            </div>
+          </div>
+
+          <div class="carousel-item custom-background">
+                <div class="solid-color-slide3"></div>
+                <div class="carousel-caption">
+                  <h3>USDT</h3>
+                  <p>This is a very important coin in the crypto space</p>
+                </div>
+          </div>
+      </div>
+      
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+  
+
+    <!--jumbotron-->
+    <section class="jumbotron custom-color"><h1><i>About TaraCrypto</i></h1><br><p>I built this site with the intention of posting crypto blogs in order to assist you on this journey by giving some information on some of the available cryptocurrencies in the market. Keep in mind that this is not financial advice, i am giving knowledge to assist you in your endevours. 
+      Ideally you should also do your research before investing into a coin.</p></section>
+
+    <!--sections for the pages-->
+    <section class="container .custom-bg-light-yellow">
+      <h2><i>Main coins:</i></h2>
+      <div class="row d-flex justify-content-between row-custom-style">
+        <div class="col-lg-3 col-custom-style"><h3><i>BTC</i></h3><br><p>Bitcoin, often referred to as digital gold, is the pioneering cryptocurrency that sparked the blockchain revolution.</p></div>
+        <div class="col-lg-3 col-custom-style"><h3><i>ETH</i></h3><br><p>Ethereum goes beyond being a digital currency—it's a decentralized platform that enables developers to build and deploy smart contracts and decentralized applications (DApps).</p></div>
+        <div class="col-lg-3 col-custom-style"><h3><i>USDT</i></h3><br><p>Tether, symbolized as USDT, is a type of stablecoin known as a "pegged" cryptocurrency. Each USDT is backed by a reserve of traditional fiat currency.</p></div>
+      </div><br>
+
+      <!--about us section-->
+      <div class="abouts-container">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-heading"><i>Ready to begin your journey?</i></h4>
+            <p class="card-text">🚀 Sign up for a Binance account now and claim your FREE 100 USDT rebate voucher! Don't miss this limited-time offer! 💰 Join thousands of others and start your crypto journey today. 
+              Click here to get started</p>
+            <a href='https://accounts.binance.info/register?ref=716747944' class="btn btn-primary custom-color">Sign up!</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-heading"><i>Take a look at the blogs</i></h4>
+            <p class="card-text">Salutations, intrepid financial voyager! Take a look at the blogs here</p>
+            <a class="btn btn-primary custom-color" href="/blogs">Blogs &gt;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-5">
+        <div class="card-body">
+          <h4 class="card-heading"><i>Support us by looking at our products</i></h4>
+          <p class="card-text">Take a look at my Products</p>
+          <a class="btn btn-primary custom-color" href="/products">Products &gt;</a>
+        </div>
+      </div>
+    </div>
+
+    </section>
+
+    <footer class="footer bg-dark text-light py-3">
+      <div class="container text-center">
+          <p><i>&copy; TaraCrypto</i></p>
+      </div>
+    </footer>
+   
+
+  </div>
+  
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

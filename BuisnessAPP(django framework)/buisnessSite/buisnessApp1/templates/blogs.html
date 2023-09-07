@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/CSS/customBootstrap.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+ 
+
+  <!--maincontainer-->
+  <div class="maincontainer">
+
+   <!--navbar-->
+      <!-- Desktop Navbar (visible on larger screens) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="/home"><b><i>TaraCrypto</i></b></a>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/blogs">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/feedback">Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+  
+    <!-- Mobile Navbar (hamburger menu; visible on smaller screens) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light d-block d-lg-none">
+        <div class="container">
+            <a class="navbar-brand" href="/home"><b><i>TaraCrypto</i></b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobileNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/blogs">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/feedback">Feedback</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <!--content-->
+  <div class="content">
+
+    <!--latest blogs page-->
+    <div class="container">
+      <h1 class="mt-4"><i>Latest Blog posts:</i></h1>
+        <div class="row mt-4">
+          {%for query in queryset%}
+            <div class="col-md-4 pb-4"> 
+                <div class="card">
+                    <img src="image1.jpg" class="card-img-top" alt="Blog Image 1">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'blogContent' query.id%}">{{query.blogTitle}}</a></h5>
+                        <p class="card-text">{{query.blogSummary}}</p>
+                        <h6 class="card-text"><i>By {{query.blogAuthor}}</i></h6>
+                        <a href="{% url 'blogContent' query.id%}" class="btn btn-primary">Read More &gt;</a>
+                    </div>
+                  </div>
+              </div>
+          {% endfor %}
+          </div>
+
+          <!--Other blogs-->
+          <h1 class="mt-4"><i>Other Blog posts:</i></h1>
+          <div class="row mt-4">
+            {%for query in queryset%}
+              <div class="col-md-4 pb-4"> 
+                  <div class="card">
+                      <img src="{{query.BlogImageLinks}}" class="card-img-top" alt="Blog Image 1">
+                      <div class="card-body">
+                          <h5 class="card-title"><a href="#">{{query.blogTitle}}</a></h5>
+                          <p class="card-text">{{query.blogSummary}}</p>
+                          <h6 class="card-text"><i>By {{query.blogAuthor}}</i></h6>
+                          <a href="{% url 'blogContent' query.id%}" class="btn btn-primary">Read More &gt;</a>
+                      </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+  </div>
+      
+
+  </div>
+
+  <footer class="footer bg-dark text-light py-3">
+    <div class="container text-center">
+        <p><i>&copy; TaraCrypto</i></p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
