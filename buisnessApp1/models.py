@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-#TODO: when i reach home to try and get the postgres server to work so i can have my site up
+#TODO: when i reach home to try and get the postgres server to work so i can have my site up{done}
 
 # this is the Table storing the headline content
 class blogHeadlineTable(models.Model):

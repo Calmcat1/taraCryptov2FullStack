@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import blogHeadlineTable, productsTable
+from django.db.models import Max
+
 # Create your views here.
 
 # homepage
@@ -26,6 +28,8 @@ def blogs(request):
 def products(request):
 
     queryset = productsTable.objects.all()
+    
+ 
 
     context = {
         'queryset' : queryset
@@ -47,9 +51,12 @@ def feedback(request):
 def blogContent(request, id):
 
     query = get_object_or_404(blogHeadlineTable, id=id)
+    maximum_id = blogHeadlineTable.objects.latest('id').id
+    
 
     context = {
-        'query' : query
+        'query' : query,
+        'query_max_id' : maximum_id
     }
 
     return render(request, 'blogContent.html', context)
@@ -59,10 +66,13 @@ def blogContent(request, id):
 def productContent(request, id):
 
     query = get_object_or_404(productsTable, id=id)
+    maximum_id = blogHeadlineTable.objects.latest('id')
+    max_val = maximum_id.id
 
     context = {
-        'query' : query
+        'query' : query,
+        'query_max_id' : max_val
     }
+   
 
     return render(request, 'productsContent.html', context)
-
