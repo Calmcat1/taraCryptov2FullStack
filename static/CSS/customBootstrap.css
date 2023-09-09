@@ -4,7 +4,7 @@ body{
 
 /*maincontainer class*/
 .maincontainer{
-  min-height: 100vh;
+  height: 100vh;
 }
 
 /* custom classes for carousel*/
