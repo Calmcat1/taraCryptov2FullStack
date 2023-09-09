@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="{% static 'CSS/customBootstrap.css' %}">
-  <title>Document</title>
+  <title>{{query.blogTitle}}</title>
 </head>
 
 <body>
@@ -99,7 +99,7 @@
                   <div class="card">
                       <img src="{{query.BlogImageLinks}}" class="card-img-top" alt="Blog Image 1">
                       <div class="card-body">
-                          <h5 class="card-title"><a href="#">{{query.blogTitle}}</a></h5>
+                          <h5 class="card-title"><a href="{% url 'blogContent' query.id%}">{{query.blogTitle}}</a></h5>
                           <p class="card-text">{{query.blogSummary}}</p>
                           <h6 class="card-text"><i>By {{query.blogAuthor}}</i></h6>
                           <a href="{% url 'blogContent' query.id%}" class="btn btn-primary">Read More &gt;</a>
