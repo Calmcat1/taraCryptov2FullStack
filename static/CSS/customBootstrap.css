@@ -2,8 +2,8 @@ body{
   margin: 0 0 0 0;
 }
 
-/*maincontainer class*/
-.maincontainer{
+/*content class*/
+.content{
   height: 100vh;
 }
 
