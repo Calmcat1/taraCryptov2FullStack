@@ -52,10 +52,16 @@ body{
 }
 
 .custom-color{
-    background-color: #FFD700;
-    color: black;
-    border: none;
+  background-color: #FFD700;
+  color: black;
+  border: none;
 
+}
+
+.custom-color-green{
+  background-color: #25D366;
+  color: white;
+  border: none;
 }
 
  #myCarousel:hover .carousel-inner {
