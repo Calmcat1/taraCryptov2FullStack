@@ -66,7 +66,7 @@ def blogContent(request, id):
 def productContent(request, id):
 
     query = get_object_or_404(productsTable, id=id)
-    maximum_id = blogHeadlineTable.objects.latest('id')
+    maximum_id = productsTable.objects.latest('id')
     max_val = maximum_id.id
 
     context = {

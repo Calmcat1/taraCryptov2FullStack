@@ -19,4 +19,5 @@ class productsTable(models.Model):
     productName = models.CharField(max_length=255)
     productDesc = models.CharField(max_length=255)
     productPrice = models.IntegerField(default=0)
+    productImageLinks = models.CharField(max_length=255, default='null')
 

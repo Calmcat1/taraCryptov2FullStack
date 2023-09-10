@@ -77,11 +77,11 @@
   <!-- Product Details -->
   <div class="row">
     <div class="container mt-5">
-    <!-- Product Details -->
+    <!-- Product Details --> 
     <div class="card pb-5 mb-5 pt-5">
         <div class="col-md-6 offset-md-3">
             <h1 class="mb-4">{{query.productName}}</h1>
-            <img src="../static/IMG/filesToBeUploaded/CryptoEBOOK.jpg" alt="Product Image" class="img-fluid mb-4">
+            <img src="{%static query.productImageLinks %}" alt="Product Image" class="img-fluid mb-4">
             <p>Description of the product goes here...</p>
             <p>{{query.productPrice}}</p>
             
